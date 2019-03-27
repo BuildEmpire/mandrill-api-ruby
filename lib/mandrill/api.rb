@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mandrill
 
 
@@ -2052,4 +2054,3 @@ module Mandrill
 
     end
 end
-

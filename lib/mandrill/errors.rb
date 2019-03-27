@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mandrill
     class Error < StandardError
     end
@@ -60,4 +62,3 @@ module Mandrill
     class UnknownMetadataFieldError < Error
     end
 end
-

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'excon'
 require 'json'
@@ -33,7 +35,7 @@ module Mandrill
             params[:key] = @apikey
             params = JSON.generate(params)
             r = @session.post(:path => "#{@path}#{url}.json", :headers => {'Content-Type' => 'application/json'}, :body => params)
-            
+
             cast_error(r.body) if r.status != 200
             return JSON.parse(r.body)
         end
@@ -145,4 +147,3 @@ module Mandrill
         end
     end
 end
-
